@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://zernis.space/'
 locale = 'pt-br'
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
