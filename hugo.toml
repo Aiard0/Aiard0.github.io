@@ -1,0 +1,80 @@
+baseURL = 'https://example.org/'
+locale = 'pt-br'
+languageCode = "pt-br"
+defaultContentLanguage = "pt-br"
+title = 'Abdon Werner'
+theme = "gokarna"
+enableRobotsTXT = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    identifier = "Home"
+    url = "/"
+    weight = 1
+    pre = "<span data-feather='home'></span>"
+    
+    [[menu.main]]
+    name = "Posts"
+    identifier = "posts"
+    url = "/posts/"
+    weight = 2
+    pre = "<span data-feather='book'></span>"
+
+    [[menu.main]]
+    name = "Projetos"
+    identifier = "projetos"
+    url = "/projetos/"
+    weight = 3
+    pre = "<span data-feather='code'></span>"
+    
+    [[menu.main]]
+    identifier = "tags"
+    url = "/tags/"
+    weight = 4
+    pre = "<span data-feather='tag'></span>"
+    
+    [[menu.main]]
+    identifier = "rss"
+    url = "/index.xml"
+    weight = 5
+    pre = "<span data-feather='rss'></span>"
+
+    [[menu.main]]
+    identifier = "github"
+    url = "https://github.com"
+    weight = 5
+    pre = "<span data-feather='github'></span>"
+
+
+[params]
+  # Choose the color shown when hyperlinks are hovered over
+  accentColor = "#4dff56"
+
+  avatarURL = "/images/avatar.png"
+
+  avatarAltText = "avatar"
+
+  socialIcons = [
+      {name = "linkedin", url = "https://linkedin.com/in/abdon-werner-454aa6299"},
+      {name = "github", url = "https://github.com/Aiard0"},
+      {name = "instagram", url = "https://instagram.com/abdonwerner"},
+      {name = "email", url = "mailto:abdonwmq@gmail.com"},
+    ]
+
+  description = "Gosto de código, Linux e construir algumas coisas."
+
+  footer = "Abdon Werner"
+
+  showBackToTopButton = true
+  dateFormat = "2 de January, 2006"
+  displayReadingTime = false
+  showPostsOnHomePage = "recent"
+  numberPostsOnHomePage = 4
+
+[minify]
+    minifyOutput = false
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
