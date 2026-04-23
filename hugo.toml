@@ -72,6 +72,10 @@ enableRobotsTXT = true
   showPostsOnHomePage = "recent"
   numberPostsOnHomePage = 4
 
+  customHeadHTML = '''
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b6174c3b-ac64-4eb5-93a6-a1add04f9845"></script>
+  '''
+
 [minify]
     minifyOutput = false
 
