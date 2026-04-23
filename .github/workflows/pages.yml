@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          submodules: recursive
+          submodules: true
           fetch-depth: 0
       - name: Setup Go
         uses: actions/setup-go@v6
@@ -84,6 +84,7 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
+          touch public/.nojekyll
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v5
