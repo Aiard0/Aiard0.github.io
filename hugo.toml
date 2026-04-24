@@ -5,9 +5,11 @@ defaultContentLanguage = "pt-br"
 title = 'Abdon Werner'
 theme = "gokarna"
 enableRobotsTXT = true
+pygmentsStyle = "monokai"
 
 [menu]
   [[menu.main]]
+    # Menu item para a página inicial do site.
     name = "Home"
     identifier = "Home"
     url = "/"
@@ -15,6 +17,7 @@ enableRobotsTXT = true
     pre = "<span data-feather='home'></span>"
     
     [[menu.main]]
+    # Menu item para a seção de posts do autor.
     name = "Posts"
     identifier = "posts"
     url = "/posts/"
@@ -22,6 +25,7 @@ enableRobotsTXT = true
     pre = "<span data-feather='book'></span>"
 
     [[menu.main]]
+    # Menu item para a seção de projetos do autor.
     name = "Projetos"
     identifier = "projetos"
     url = "/projetos/"
@@ -29,56 +33,65 @@ enableRobotsTXT = true
     pre = "<span data-feather='code'></span>"
     
     [[menu.main]]
+    # Menu item para a seção de tags do site.
     identifier = "tags"
     url = "/tags/"
     weight = 4
     pre = "<span data-feather='tag'></span>"
     
     [[menu.main]]
+    # Menu item para o feed RSS do site.
     identifier = "rss"
     url = "/index.xml"
-    weight = 5
+    weight = 6
     pre = "<span data-feather='rss'></span>"
 
     [[menu.main]]
+    # Menu item para o repositório desse projeto no GitHub.
     identifier = "github"
-    url = "https://github.com"
+    url = "https://github.com/Aiard0/Aiard0.github.io"
     weight = 5
     pre = "<span data-feather='github'></span>"
 
 
 [params]
-  # Choose the color shown when hyperlinks are hovered over
+  # Cor de destaque do site
   accentColor = "#4dff56"
-
+  # URL do avatar do autor
   avatarURL = "/images/avatar.png"
-
+  # Texto alternativo para o avatar do autor, usado para acessibilidade e SEO
   avatarAltText = "avatar"
-
+  # Redes sociais do autor
   socialIcons = [
       {name = "linkedin", url = "https://linkedin.com/in/abdon-werner-454aa6299"},
       {name = "github", url = "https://github.com/Aiard0"},
       {name = "instagram", url = "https://instagram.com/abdonwerner"},
       {name = "email", url = "mailto:abdonwmq@gmail.com"},
     ]
-
+  # Descrição do perfil do autor
   description = "Gosto de código, Linux e construir algumas coisas."
-
+  # Texto do rodapé do site
   footer = "Abdon Werner"
-
+  # Quando true, exibe um botão "Voltar ao topo" no canto inferior direito da tela se o conteúdo da página for maior que a altura da janela do navegador
   showBackToTopButton = true
+  # Formato de data para exibir as datas dos posts
   dateFormat = "2 de January, 2006"
-  displayReadingTime = false
+  # Configuração para exibir o tempo de leitura estimado em cada post
+  displayReadingTime = true
+  # Configuração para exibir posts na página inicial: "recent" para os mais recentes, "featured" para os destacados ou "none" para não exibir nenhum post
   showPostsOnHomePage = "recent"
+  # Número de posts a exibir na página inicial quando showPostsOnHomePage for "recent"
   numberPostsOnHomePage = 4
-
+  # Configuração de HEAD personalizado para incluir o script de análise do Umami (Analytics)
   customHeadHTML = '''
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b6174c3b-ac64-4eb5-93a6-a1add04f9845"></script>
   '''
 
 [minify]
-    minifyOutput = false
+    # Habilita a minificação de HTML, CSS e JavaScript para reduzir o tamanho dos arquivos e melhorar o desempenho do site
+    minifyOutput = true
 
 [caches]
   [caches.images]
+    # Especifica o diretório onde as imagens processadas serão armazenadas. O valor ':cacheDir' é um placeholder que Hugo substitui pelo caminho real do diretório de cache, garantindo que as imagens sejam armazenadas em um local gerenciado pelo sistema de cache do Hugo.
     dir = ':cacheDir/images'
