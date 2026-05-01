@@ -5,7 +5,7 @@ description: "Eu comecei sem saber nada (só sabia Java), e depois aprendi que e
 lastmod: 2026-05-01
 showTableOfContents: true
 tags: ["Minecraft", "Neoforge", "Java", "Nephus"]
-title: "Minha primeira experiência criando um mod no Minecraft"
+title: "Como eu criei meu primeiro mod de Minecraft"
 type: "post"
 ---
 
